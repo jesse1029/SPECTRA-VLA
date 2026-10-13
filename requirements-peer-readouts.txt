@@ -1,0 +1,7 @@
+# Separately verified profile for the final published spectral-peer readouts.
+# Do not mix with the OpenVLA bridge training profile.
+numpy==2.2.6
+scipy==1.14.1
+scikit-learn==1.8.0
+torch==2.6.0
+threadpoolctl==3.6.0
