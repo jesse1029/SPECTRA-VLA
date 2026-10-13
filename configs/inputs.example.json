@@ -1,0 +1,8 @@
+{
+  "metadata": "data/metadata.npz",
+  "token_grids": ["data/grids_train.npy", "data/grids_val.npy", "data/grids_test.npy"],
+  "token_masks": ["data/masks_train.npy", "data/masks_val.npy", "data/masks_test.npy"],
+  "raw_spectra": ["data/spectra_train.npy", "data/spectra_val.npy", "data/spectra_test.npy"],
+  "rgb_tokens": ["data/rgb_tokens_train.npy", "data/rgb_tokens_val.npy", "data/rgb_tokens_test.npy"],
+  "operational_base": "data/base_pooled_reference.npy"
+}

@@ -1,0 +1,142 @@
+{
+  "openvla": {
+    "repository": "openvla/openvla-7b",
+    "revision": null,
+    "files": [
+      {
+        "file": "added_tokens.json",
+        "sha256": "ab43123267b190cb7990bc9f2ae4ad32dcb7ed029fb0fccb1b4e062c6f54a2a1"
+      },
+      {
+        "file": "config.json",
+        "sha256": "edd5c5cf6d7927e07465cf086ebe41f7b3ec8f3b128a51f71d6db14dad7ad8b1"
+      },
+      {
+        "file": "configuration_prismatic.py",
+        "sha256": "68cc5ae34f1b46af3168d8d479cb81bb776965653453fd904aa8eefb6c8f9f68"
+      },
+      {
+        "file": "generation_config.json",
+        "sha256": "67fbe17b12e8beb5be98eb911483971cc78589e51a37ac0cce9cd499d06a8bf1"
+      },
+      {
+        "file": "model-00001-of-00003.safetensors",
+        "sha256": "10d8636256018712c5e5c823d12e22b5797f99bb721bd123bf6bf2379892be85"
+      },
+      {
+        "file": "model-00002-of-00003.safetensors",
+        "sha256": "2050b14f21d48904d269f48d5a980fecea87cd7b36641d9b0f015e72d1fe216a"
+      },
+      {
+        "file": "model-00003-of-00003.safetensors",
+        "sha256": "ea65305a1577f36f721965bf84c8caec0a948ce7ce84d754701637376c531fef"
+      },
+      {
+        "file": "model.safetensors.index.json",
+        "sha256": "b3a4516f74a609422002e265e542c23ddf11e54c2b781e1c0d4e23e5181f3fd0"
+      },
+      {
+        "file": "modeling_prismatic.py",
+        "sha256": "9ce241c5ca09a4bed73654d0ca509baaff0fc5887d0bdd62e360ca8254f7794a"
+      },
+      {
+        "file": "preprocessor_config.json",
+        "sha256": "bd024783fb785cbdfe35b710b621c5e8678d4c157a9ba625675e67d40d1757da"
+      },
+      {
+        "file": "processing_prismatic.py",
+        "sha256": "06563586bbc73d36501a14a231a3174904ede830d33174d0c625ece8e931ef1e"
+      },
+      {
+        "file": "processor_config.json",
+        "sha256": "167e026d8121f6cb0bf5c18310b97ba8139152f970822bb3824213bd37dc7a76"
+      },
+      {
+        "file": "special_tokens_map.json",
+        "sha256": "cb90ee5cf5793aa444039af9795b00db59d3fef8942e7eca9cf1990bab370d61"
+      },
+      {
+        "file": "tokenizer.json",
+        "sha256": "8f5e2869e1807b8bb3c7717a294539c37e9de5d728ad60e31ef57e83cc5ea527"
+      },
+      {
+        "file": "tokenizer.model",
+        "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+      },
+      {
+        "file": "tokenizer_config.json",
+        "sha256": "f5f1d3ed015ebb71cf11686ff00bc8e0c25957bbf3952f95312cecc9b168fbea"
+      }
+    ]
+  },
+  "spatialvla": {
+    "repository": "IPEC-COMMUNITY/spatialvla-4b-224-pt",
+    "revision": "886c4557dfde53b44c0f74fde7d89bf83a26c3cd",
+    "files": [
+      {
+        "file": "action_tokenizer.py",
+        "sha256": "b6b18eee0320e77156881aea4a92ea5f54dc278d43c1ea72c3a0deaa9d505a31"
+      },
+      {
+        "file": "config.json",
+        "sha256": "0c5d94be86f9e15b708650c4b829033ae99243f85507012b1dafa0263f799909"
+      },
+      {
+        "file": "configuration_spatialvla.py",
+        "sha256": "63e100324daf81d2cd7b6c5e6fafcace67d660586ef7b509bb38cc8fba72c1e3"
+      },
+      {
+        "file": "generation_config.json",
+        "sha256": "79c657e6d0660218a91c360516cae5b8fa0cf1dd447476c8dcdb815c8ff994b1"
+      },
+      {
+        "file": "model-00001-of-00002.safetensors",
+        "sha256": "713ee1bd116c8f77e2f56903d15e6c3f3dff6ea6b12fc71bfcc3bd4a53a2cc2b"
+      },
+      {
+        "file": "model-00002-of-00002.safetensors",
+        "sha256": "b8c87abc1b91598ad237c31ee2286c5c783bfb9f4142696d9b1c36e62f634a34"
+      },
+      {
+        "file": "model.safetensors.index.json",
+        "sha256": "6c351156136b2452db86d3a426ff30adc9d11363b43f46fa69fe79d76b6d5c79"
+      },
+      {
+        "file": "modeling_gemma2.py",
+        "sha256": "a21d2983a01ae6b9e25c9f6fa4daff316f98f4f44435b482e8f1f8bbfb406b38"
+      },
+      {
+        "file": "modeling_spatialvla.py",
+        "sha256": "a04008cf364e094079493e5982fa2b32fca12874b0a42b645e0aecab024e7236"
+      },
+      {
+        "file": "preprocessor_config.json",
+        "sha256": "bdb79dc3255a75c1c4be8ac1ddd4e2aa08b9a29eee0431755b7b0faa3b54e413"
+      },
+      {
+        "file": "processing_spatialvla.py",
+        "sha256": "c20b15460633f65809788c633936347fada2f2bbcfffba898d2f0b4b99807b33"
+      },
+      {
+        "file": "processor_config.json",
+        "sha256": "8712b6d5171f74e90f951ec7b148ab90509f28434e36b2da959527fa0ddb57ea"
+      },
+      {
+        "file": "special_tokens_map.json",
+        "sha256": "c87885c12d55c60133110a234291db5ac952e99e83d9735099d304cb4d45914d"
+      },
+      {
+        "file": "test_huggingface.py",
+        "sha256": "1e2455c1f078298b1715bea47ae582931df0f3742f1f58f9976085a34c429fcd"
+      },
+      {
+        "file": "tokenizer.json",
+        "sha256": "2523a63c898ebf0a32c7282a2e459ef2c950a846c5f3172305089e4149b6b6c3"
+      },
+      {
+        "file": "tokenizer_config.json",
+        "sha256": "33f38858ac90afd5ac29942110dd3b98f40e1e194fca254714bab5d88f57cc65"
+      }
+    ]
+  }
+}

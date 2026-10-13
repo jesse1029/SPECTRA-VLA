@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locked_at": "2026-08-09T19:15:00+08:00",
+  "purpose": "R2-E2 session-independent 60-epoch confirmation. All operating points are selected only from sessions belonging to the outer-training partition.",
+  "outer_units": "86 acquisition sessions whose original split is train or test",
+  "inner_selection": "deterministic session split within each outer-training partition",
+  "selection_epochs": 12,
+  "refit_epochs": 60,
+  "seed": 20260809,
+  "ranks": [32, 64],
+  "fine_loss_weights": [0.5, 1.0, 2.0],
+  "injection_scales": [0.0, 0.125, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0],
+  "direct_alignment_alphas": [0.0, 0.01, 0.05, 0.1, 0.5, 1.0, 10.0],
+  "direct_min_validation_cosine": 0.94,
+  "ambiguity_thresholds": [0.8, 0.85, 0.9, 0.95],
+  "minimum_validation_pairs": 20,
+  "readout_alphas": [0.01, 0.1, 1.0, 10.0, 100.0],
+  "hard_pair_weight": 4.0,
+  "selection_rule": "For each residual candidate, maximize validation material balanced accuracy + 0.25 x validation pair resolution; ties favor higher validation cosine, then lower injection scale, lower rank, and lower fine-loss weight. The direct replacement applies the same score only among candidates with validation cosine >= 0.94; if none exists, it uses maximum cosine, then score.",
+  "refit_rule": "After representation and readout regularization are selected on inner-train/inner-validation only, refit the selected adapter for exactly 60 epochs on the complete outer-training sessions. The held-out outer session is evaluated once and never enters normalization, spectral basis estimation, threshold selection, model selection, or readout selection.",
+  "bootstrap_repeats": 10000,
+  "bootstrap_seed": 20260891
+}
+

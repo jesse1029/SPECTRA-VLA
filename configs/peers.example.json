@@ -1,0 +1,12 @@
+[
+  {"name": "HyperSL", "feature_key": "hypersl_feat", "files": {
+    "train": "../cache/peers/hypersl_train.npz", "val": "../cache/peers/hypersl_val.npz", "test": "../cache/peers/hypersl_test.npz"}},
+  {"name": "MaskedSST", "feature_key": "maskedsst_feat", "files": {
+    "train": "../cache/peers/maskedsst_train.npz", "val": "../cache/peers/maskedsst_val.npz", "test": "../cache/peers/maskedsst_test.npz"}},
+  {"name": "DOFA", "feature_key": "dofa_feat", "files": {
+    "train": "../cache/peers/dofa_train.npz", "val": "../cache/peers/dofa_val.npz", "test": "../cache/peers/dofa_test.npz"}},
+  {"name": "SpectralGPT", "feature_key": "spectralgpt_mae", "files": {
+    "train": "../cache/peers/spectralgpt_mae_train.npz", "val": "../cache/peers/spectralgpt_mae_val.npz", "test": "../cache/peers/spectralgpt_mae_test.npz"}},
+  {"name": "HyperSIGMA", "feature_key": "hypersigma_specvit", "files": {
+    "train": "../cache/peers/hypersigma_specvit_train.npz", "val": "../cache/peers/hypersigma_specvit_val.npz", "test": "../cache/peers/hypersigma_specvit_test.npz"}}
+]

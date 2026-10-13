@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "metadata_sha256": "093c6d127272c05ad9d8aba6dca5dd237022a0eb5a7f0c98dc478d5cc6ec6db6",
+  "adapter_refit_epochs": 60,
+  "hard_pair_weight": 4,
+  "hard_pair_similarity_threshold": 0.75,
+  "methods": {
+    "false_color_hsi_openvla_base": {
+      "kind": "base",
+      "rank": 0,
+      "spectral_injection_scale": 0
+    },
+    "proposed_base_fine": {
+      "kind": "residual",
+      "model_method": "proposed_base_fine",
+      "rank": 64,
+      "fine_budget": 0.1,
+      "spectral_injection_scale": 4,
+      "selection_source": "mean validation score over the fixed-split q frontier"
+    },
+    "no_orthogonalization": {
+      "kind": "residual",
+      "model_method": "proposed_no_orthogonalization",
+      "rank": 64,
+      "fine_budget": 0.1,
+      "spectral_injection_scale": 4,
+      "selection_source": "mean validation score over the fixed-split q frontier"
+    },
+    "parameter_matched_additive_mlp": {
+      "kind": "residual",
+      "model_method": "parameter_matched_mlp_residual",
+      "rank": 64,
+      "fine_budget": 0.1,
+      "spectral_injection_scale": 2,
+      "selection_source": "mean validation score over the fixed-split q frontier"
+    },
+    "rank32_base_conditioned_direct": {
+      "kind": "replace",
+      "rank": 32,
+      "alignment_alpha": 0.05,
+      "selection_source": "highest mean validation utility among direct points with mean validation cosine at least 0.94"
+    }
+  },
+  "readout_alphas": {
+    "false_color_hsi_openvla_base": {
+      "material": 100,
+      "state": 100
+    },
+    "no_orthogonalization": {
+      "material": 100,
+      "state": 100
+    },
+    "parameter_matched_additive_mlp": {
+      "material": 100,
+      "state": 100
+    },
+    "proposed_base_fine": {
+      "material": 100,
+      "state": 100
+    },
+    "rank32_base_conditioned_direct": {
+      "material": 100,
+      "state": 100
+    }
+  },
+  "comparison_order": [
+    "false_color_hsi_openvla_base",
+    "no_orthogonalization",
+    "parameter_matched_additive_mlp",
+    "rank32_base_conditioned_direct"
+  ],
+  "uncertainty": {
+    "analysis_unit": "acquisition_session",
+    "bootstrap_replicates": 10000,
+    "seed": 20260930,
+    "balanced_accuracy_rule": "macro recall over the complete observed class inventory; a missing class in a bootstrap draw contributes zero recall"
+  },
+  "selection": "Operating points and readout regularization are fixed from the original training/validation experiment before acquisition-session refitting.",
+  "reference_protocol_sha256": "9c11d9d418297dff6a1c7ff949e536e492369f62b3b0c9037524af345972362a",
+  "reference_outputs_sha256": {
+    "aggregate.csv": "d31fda4368db9912788dc8ebe8648caefd638f51c5f7a7047ee2f2f368cac782",
+    "fold_metrics.csv": "74a003408f0e197c7c0a6faa5188cfcbb492a01dc807ab97f33b5c561fe1e904",
+    "out_of_fold_predictions.csv": "2be386ca7330c0290f1d93d793ea263682fd066076d5a1560233b4baf0329ef8",
+    "paired_session_differences.csv": "74e0866a9404137fad272d7d212c8438126aa2fcbd985e6fe2cf70292b4826f9"
+  }
+}
