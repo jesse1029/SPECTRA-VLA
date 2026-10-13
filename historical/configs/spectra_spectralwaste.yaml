@@ -1,0 +1,93 @@
+data:
+  bin_mapping:
+    1: 1
+    2: 2
+    3: 0
+    4: 3
+    5: 1
+    6: 1
+  classes:
+  - background
+  - film
+  - basket
+  - cardboard
+  - video_tape
+  - filament
+  - bag
+  hsi_band_subsample: 1
+  hsi_bands: all
+  image_size: 224
+  label_mode: labels_hyper_lt
+  min_area: 100
+  num_bins: 4
+evaluation:
+  ambiguous_split: cache/spectralwaste/rgb_ambiguous_pairs.json
+  human_verified_split: cache/spectralwaste/human_verified_test.json
+  metrics:
+  - target_accuracy
+  - pick_in_mask
+  - pick_in_acceptable
+  - bin_accuracy
+  - action_correctness
+  - policy_kl
+  - spectral_separability
+  rgb_sim_thresh: 0.9
+  spec_diff_thresh: 0.3
+loss:
+  lambda_cf: 0.5
+  lambda_phys: 1.0
+  lambda_pol: 1.0
+  lambda_policy: 0.5
+  lambda_res: 0.5
+  phys_ent: 0.01
+  phys_sum: 0.1
+  phys_tv: 0.01
+  res_margin: 0.5
+  res_pos_frac: 0.34
+  res_temperature: 0.1
+model:
+  abundance: learned
+  canonical_bands: 120
+  lang_dim: 4096
+  n_endmembers: 16
+  patch_size: 14
+  policy_rank: 64
+  token_dim: 1024
+  tokenizer_hidden: 128
+paths:
+  cache_dir: cache/spectralwaste
+  out_dir: results/spectralwaste
+  spectralwaste_root: data/spectralwaste/spectralwaste_segmentation
+  vla_path: checkpoints/openvla-7b
+policy_subspace:
+  n_probe_images: 256
+  probe_instructions:
+  - pick up the object
+  - grasp the item and place it in the bin
+  - sort this object
+  rank: 64
+run_name: spectra_spectralwaste
+seeds:
+- 0
+- 1
+- 2
+training:
+  batch_size: 8
+  ckpt_every: 1
+  epochs: 20
+  grad_accum: 4
+  heavy_loss_every: 1
+  log_every: 10
+  lr: 0.0001
+  num_workers: 2
+  optimizer: AdamW
+  precision: bf16
+  seed: 0
+  weight_decay: 0.05
+vla:
+  device: cuda
+  dtype: bf16
+  name: openvla
+  num_visual_tokens: 256
+  token_grid: 16
+  vla_dim: 4096
